@@ -16,7 +16,7 @@ postDirectives:
 runson: win
 tunnelOpts:
     testsPerTunnel: 10
-jobID: db9b39f7-3f25-4431-81d8-620483dba0af
+jobID: 7a485ee8-2254-40ab-bf41-c17f8ace8489
 codeDirectory: playwright-102-assignment
 framework:
     name: ""

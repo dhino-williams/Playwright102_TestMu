@@ -20,9 +20,6 @@ test('Scenario 1: Simple Form Demo Assertion', async ({ page }) => {
   await page.locator('button#showInput').click();
 
   // 6. Target the explicit message display element directly
-  const displayedMessage = page.locator('#message');
-
-  // Playwright Best Practice: Provide an explicit assertion timeout override
-  // giving Chrome's rendering cycle plenty of time to populate the text node.
-  await expect(displayedMessage).toHaveText(customMessage, { timeout: 5000 });
+ const displayedMessage = page.locator('#message');
+await expect(displayedMessage).toHaveText("Welcome to TestMu AI");
 });

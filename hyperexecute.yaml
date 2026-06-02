@@ -11,5 +11,4 @@ matrix:
 stages:
   - name: execute_playwright_scenarios
     test:
-      # Explicitly command Playwright to look in the tests directory
       - npx playwright test tests/simple_form.spec.ts tests/drag_drop_slider.spec.ts tests/input_form_submit.spec.ts
