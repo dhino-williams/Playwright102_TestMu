@@ -1,0 +1,26 @@
+{
+  "name": "playwright-102-assignment",
+  "version": "1.0.0",
+  "description": "Playwright 102 Certification Assignment on HyperExecute",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.9.3"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.60.0",
+    "playwright-core": "^1.60.0",
+    "undici-types": "^6.21.0"
+  }
+}

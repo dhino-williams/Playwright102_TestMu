@@ -1,0 +1,203 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\playwright.config.mts",
+    "rootDir": "C:/Users/Dell/LambdaTestPlaywright102/playwright-102-assignment/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Dell/LambdaTestPlaywright102/playwright-102-assignment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "win-chrome",
+        "name": "win-chrome",
+        "testDir": "C:/Users/Dell/LambdaTestPlaywright102/playwright-102-assignment/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Dell/LambdaTestPlaywright102/playwright-102-assignment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "linux-firefox",
+        "name": "linux-firefox",
+        "testDir": "C:/Users/Dell/LambdaTestPlaywright102/playwright-102-assignment/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "simple_form.spec.ts",
+      "file": "simple_form.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Scenario 1: Simple Form Demo Assertion",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "win-chrome",
+              "projectName": "win-chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8207,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#message')\nExpected: \u001b[32m\"Welcome to TestMu AI\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#message')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"message\" class=\"mt-20\"></p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#message')\nExpected: \u001b[32m\"Welcome to TestMu AI\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#message')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"message\" class=\"mt-20\"></p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n    at C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\tests\\simple_form.spec.ts:27:34",
+                    "location": {
+                      "file": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\tests\\simple_form.spec.ts",
+                      "column": 34,
+                      "line": 27
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m   \u001b[90m// Playwright Best Practice: Provide an explicit assertion timeout override\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[90m// giving Chrome's rendering cycle plenty of time to populate the text node.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m   \u001b[36mawait\u001b[39m expect(displayedMessage)\u001b[33m.\u001b[39mtoHaveText(customMessage\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\tests\\simple_form.spec.ts",
+                        "column": 34,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#message')\nExpected: \u001b[32m\"Welcome to TestMu AI\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#message')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"message\" class=\"mt-20\"></p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   \u001b[90m// Playwright Best Practice: Provide an explicit assertion timeout override\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[90m// giving Chrome's rendering cycle plenty of time to populate the text node.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m   \u001b[36mawait\u001b[39m expect(displayedMessage)\u001b[33m.\u001b[39mtoHaveText(customMessage\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\tests\\simple_form.spec.ts:27:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-02T20:33:49.545Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\test-results\\simple_form-Scenario-1-Simple-Form-Demo-Assertion-win-chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\test-results\\simple_form-Scenario-1-Simple-Form-Demo-Assertion-win-chrome\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\test-results\\simple_form-Scenario-1-Simple-Form-Demo-Assertion-win-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Dell\\LambdaTestPlaywright102\\playwright-102-assignment\\tests\\simple_form.spec.ts",
+                    "column": 34,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "48ae7c328047fb54642f-58db8da7cbe74cba34ee",
+          "file": "simple_form.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Scenario 1: Simple Form Demo Assertion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "linux-firefox",
+              "projectName": "linux-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 16214,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-02T20:33:49.591Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "48ae7c328047fb54642f-f22389e5f8b665e53305",
+          "file": "simple_form.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-02T20:33:48.681Z",
+    "duration": 20853.32,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

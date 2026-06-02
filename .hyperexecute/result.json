@@ -1,0 +1,137 @@
+{
+    "id": "3ecfe30f-7992-408c-b0e5-71b149f00303",
+    "created_at": "2026-06-02T20:50:14Z",
+    "update_at": "2026-06-02T20:50:59Z",
+    "global_timeout": 90,
+    "tunnel_name": "",
+    "start_time": "2026-06-02T20:50:38Z",
+    "end_time": "2026-06-02T20:50:59Z",
+    "summary": {
+        "total_time": 21000000000,
+        "execution_time": 21000000000,
+        "total_tasks": 4,
+        "build_time_consumed": 39000000000,
+        "jobTestExecutionTime": "0s",
+        "failed_tasks": 0,
+        "total_stage_info": {
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 4
+            }
+        },
+        "status": "completed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=3ecfe30f-7992-408c-b0e5-71b149f00303"
+    },
+    "tasks": [
+        {
+            "id": "HYPW-3144436-1780433436531572839BQE",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2026-06-02T20:50:36Z",
+            "update_at": "2026-06-02T20:50:47Z",
+            "start_time": "2026-06-02T20:50:38Z",
+            "end_time": "2026-06-02T20:50:47Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "f16e36b8-2842-4e73-8504-11249c9e0a1b",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2026-06-02T20:50:39Z",
+                    "started_at": "2026-06-02T20:50:39Z",
+                    "updated_at": "2026-06-02T20:50:47Z",
+                    "order": 1,
+                    "task_number": 1
+                }
+            ]
+        },
+        {
+            "id": "HYPW-3144436-1780433436537729054PMM",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2026-06-02T20:50:36Z",
+            "update_at": "2026-06-02T20:50:49Z",
+            "start_time": "2026-06-02T20:50:38Z",
+            "end_time": "2026-06-02T20:50:49Z",
+            "group_number": 2,
+            "stages": [
+                {
+                    "id": "7fce11c7-8ffd-4961-8b92-ff1f4914e226",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2026-06-02T20:50:39Z",
+                    "started_at": "2026-06-02T20:50:39Z",
+                    "updated_at": "2026-06-02T20:50:48Z",
+                    "order": 1,
+                    "task_number": 2
+                }
+            ]
+        },
+        {
+            "id": "HYPW-3144436-1780433436542816347HMI",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2026-06-02T20:50:36Z",
+            "update_at": "2026-06-02T20:50:58Z",
+            "start_time": "2026-06-02T20:50:49Z",
+            "end_time": "2026-06-02T20:50:58Z",
+            "group_number": 3,
+            "stages": [
+                {
+                    "id": "0fb8ca8c-92ae-4b78-a672-9aff253f5674",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2026-06-02T20:50:50Z",
+                    "started_at": "2026-06-02T20:50:50Z",
+                    "updated_at": "2026-06-02T20:50:58Z",
+                    "order": 1,
+                    "task_number": 3
+                }
+            ]
+        },
+        {
+            "id": "HYPW-3144436-1780433436548139746BCT",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2026-06-02T20:50:36Z",
+            "update_at": "2026-06-02T20:50:59Z",
+            "start_time": "2026-06-02T20:50:49Z",
+            "end_time": "2026-06-02T20:50:59Z",
+            "group_number": 4,
+            "stages": [
+                {
+                    "id": "e5f5e47a-0e5d-43ef-b777-c3e63a72c8aa",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2026-06-02T20:50:50Z",
+                    "started_at": "2026-06-02T20:50:50Z",
+                    "updated_at": "2026-06-02T20:50:59Z",
+                    "order": 1,
+                    "task_number": 4
+                }
+            ]
+        }
+    ],
+    "test_ids": null
+}
