@@ -1,28 +1,40 @@
 version: 0.1
 runson: win
 
+# Secret Management: Securely injects credentials
 env:
   LT_USERNAME: ${secret.LT_USERNAME}
   LT_ACCESS_KEY: ${secret.LT_ACCESS_KEY}
 
+# Pre-steps: Using npm ci as per assignment
 pre:
   - npm ci
 
+# Parallel Execution: Matrix mode for multi-browser/OS coverage
 matrix:
   os: [win, linux]
   browser: [chrome, firefox]
 
-# Force HyperExecute to discover tests in the 'tests' directory
+# Execution: Explicit test discovery and runner command
+# Using local mode for reliable test discovery
 testDiscovery:
   type: raw
   mode: local
   command: npx playwright test --list
 
-# Execute the discovered tests
 test:
   - npx playwright test
 
+# Artifacts Management: Collects test-results and reports
 artifacts:
   path:
     - playwright-report/
     - test-results/
+
+# Assignment Requirement: Capture video for scenarios
+captureScreenRecordingForScenarios: true
+
+# Optimization: Speed up subsequent runs
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
