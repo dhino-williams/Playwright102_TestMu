@@ -1,6 +1,11 @@
 version: 0.1
 runson: win
 
+# Secrets from LambdaTest Dashboard
+env:
+  LT_USERNAME: ${secret.LT_USERNAME}
+  LT_ACCESS_KEY: ${secret.LT_ACCESS_KEY}
+
 pre:
   - npm ci
 
@@ -8,7 +13,12 @@ matrix:
   os: [win, linux]
   browser: [chrome, firefox]
 
-stages:
-  - name: execute_playwright_scenarios
-    test:
-      - npx playwright test tests/simple_form.spec.ts tests/drag_drop_slider.spec.ts tests/input_form_submit.spec.ts
+# Move the test command to the root level
+test:
+  - npx playwright test
+
+# Artifacts for the assignment
+artifacts:
+  path:
+    - playwright-report/
+    - test-results/
