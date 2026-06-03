@@ -1,34 +1,28 @@
 version: 0.1
 runson: win
 
-# Secret Management: Inject secure keys from HyperExecute Secrets
 env:
   LT_USERNAME: ${secret.LT_USERNAME}
   LT_ACCESS_KEY: ${secret.LT_ACCESS_KEY}
 
-# Dependency Caching: Speed up pre-steps
-cacheKey: '{{ checksum "package-lock.json" }}'
-cacheDirectories:
-  - node_modules
-
-# Pre Steps: Install dependencies before test execution
 pre:
   - npm ci
 
-# Parallel Matrix Execution: Run across multiple browsers/OS
 matrix:
-  os: ["win", "linux"]
-  browser: ["chrome", "firefox"]
+  os: [win, linux]
+  browser: [chrome, firefox]
 
-# Test Execution
+# Force HyperExecute to discover tests in the 'tests' directory
+testDiscovery:
+  type: raw
+  mode: local
+  command: npx playwright test --list
+
+# Execute the discovered tests
 test:
   - npx playwright test
 
-# Artifacts Management: Collate reports and videos
 artifacts:
   path:
     - playwright-report/
     - test-results/
-
-# Ensure all scenarios are recorded
-captureScreenRecordingForScenarios: true
