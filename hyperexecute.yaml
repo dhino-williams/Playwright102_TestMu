@@ -1,7 +1,6 @@
 version: 0.1
 runson: win
 
-# Secrets from LambdaTest Dashboard
 env:
   LT_USERNAME: ${secret.LT_USERNAME}
   LT_ACCESS_KEY: ${secret.LT_ACCESS_KEY}
@@ -13,11 +12,10 @@ matrix:
   os: [win, linux]
   browser: [chrome, firefox]
 
-# Move the test command to the root level
+# Force execution from the root
 test:
   - npx playwright test
 
-# Artifacts for the assignment
 artifacts:
   path:
     - playwright-report/
